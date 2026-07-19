@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="蘇映瑋 Naomi Su｜CSIA Level 1 與 CASI Level 1 滑雪教練履歷"
+    />
+    <title>Naomi Su | Snowboard &amp; Ski Instructor</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <style>
+      :root {
+        --ink: #153848;
+        --muted: #587381;
+        --paper: #f6fafb;
+        --snow: #e8f2f5;
+        --pine: #236c86;
+        --pine-dark: #154f68;
+        --sun: #5c9db8;
+        --line: #d1e1e7;
+        --card: #ffffff;
+        --shadow: 0 18px 45px rgba(21, 79, 104, 0.1);
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+        line-height: 1.75;
+      }
+
+      a { color: inherit; }
+
+      .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+
+      .site-header {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        padding: 24px 0;
+        color: #fff;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .wordmark {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.08rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+      }
+
+      .nav-links { display: flex; gap: 20px; font-size: 0.87rem; }
+      .nav-links a { opacity: 0.86; text-decoration: none; }
+      .nav-links a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 5px; }
+
+      .hero {
+        position: relative;
+        min-height: 690px;
+        overflow: hidden;
+        color: #fff;
+        background: linear-gradient(120deg, #144f6c 0%, #267c95 48%, #8dbdcc 100%);
+      }
+
+      .hero::before,
+      .hero::after {
+        position: absolute;
+        inset: auto 0 0;
+        content: "";
+        pointer-events: none;
+      }
+
+      .hero::before {
+        height: 55%;
+        opacity: 0.26;
+        background:
+          linear-gradient(145deg, transparent 0 42%, #e9f4f8 42.2% 58%, transparent 58.2%) 0 100% / 530px 330px no-repeat,
+          linear-gradient(35deg, transparent 0 42%, #e9f4f8 42.2% 58%, transparent 58.2%) 100% 100% / 650px 360px no-repeat;
+      }
+
+      .hero::after {
+        height: 145px;
+        background: var(--paper);
+        clip-path: polygon(0 78%, 17% 34%, 35% 73%, 54% 25%, 73% 66%, 88% 24%, 100% 57%, 100% 100%, 0 100%);
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+        gap: 50px;
+        min-height: 630px;
+        padding: 112px 0 120px;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 14px;
+        color: #d7edf4;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before { width: 28px; height: 1px; background: currentColor; content: ""; }
+
+      h1, h2, h3, p { margin-top: 0; }
+
+      h1 {
+        max-width: 680px;
+        margin-bottom: 18px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(3.2rem, 7vw, 5.6rem);
+        font-weight: 500;
+        letter-spacing: -0.06em;
+        line-height: 0.96;
+      }
+
+      .english-name {
+        display: block;
+        margin-top: 14px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.3rem, 2vw, 1.75rem);
+        font-style: italic;
+        letter-spacing: 0.02em;
+      }
+
+      .role { max-width: 470px; margin-bottom: 26px; font-size: 1.07rem; }
+      .role span { display: block; margin-top: 3px; color: #d7edf4; font-size: 0.86rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+      .certificate-row { display: flex; flex-wrap: wrap; gap: 10px; }
+      .certificate {
+        padding: 7px 11px;
+        border: 1px solid rgba(255, 255, 255, 0.43);
+        border-radius: 999px;
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+      }
+
+      .portrait-placeholder {
+        position: relative;
+        justify-self: end;
+        width: min(100%, 345px);
+        aspect-ratio: 0.79;
+        overflow: hidden;
+        border: 3px solid rgba(255, 255, 255, 0.75);
+        border-radius: 170px 170px 16px 16px;
+        background: #dcecf3;
+        box-shadow: 16px 18px 0 rgba(13, 57, 79, 0.18);
+      }
+
+      .portrait-placeholder::before {
+        display: none;
+      }
+
+      .portrait-placeholder::after {
+        display: none;
+      }
+
+      .portrait-placeholder img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 45% center; }
+
+      .portrait-label {
+        position: absolute;
+        z-index: 1;
+        right: 18px;
+        bottom: 17px;
+        padding: 5px 9px;
+        border-radius: 3px;
+        background: rgba(16, 71, 96, 0.79);
+        font-size: 0.73rem;
+        letter-spacing: 0.08em;
+      }
+
+      main { padding-bottom: 76px; }
+
+      .intro {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        gap: 50px;
+        padding: 20px 0 92px;
+      }
+
+      .section-kicker { margin: 0 0 8px; color: var(--sun); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.15em; }
+      h2 { margin-bottom: 16px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 3.2vw, 3rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1.14; }
+      .lead { margin: 0; font-size: clamp(1.12rem, 1.8vw, 1.35rem); line-height: 1.9; }
+      .english-summary { margin: 22px 0 0; padding-left: 18px; border-left: 2px solid var(--sun); color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-size: 1rem; font-style: italic; line-height: 1.75; }
+
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 90px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--card);
+        box-shadow: var(--shadow);
+      }
+
+      .stat { padding: 25px 20px; border-right: 1px solid var(--line); text-align: center; }
+      .stat:last-child { border-right: 0; }
+      .stat strong { display: block; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.8rem, 3vw, 2.55rem); font-weight: 500; line-height: 1; }
+      .stat span { display: block; margin-top: 9px; color: var(--muted); font-size: 0.8rem; line-height: 1.45; }
+
+      .credentials { padding: 0 0 88px; }
+      .credentials-head { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 26px; }
+      .credentials-head h2 { margin-bottom: 0; }
+      .credentials-head p:not(.section-kicker) { max-width: 480px; margin: 0; color: var(--muted); font-size: 0.92rem; }
+      .credential-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+      .credential-card {
+        overflow: hidden;
+        border-radius: 12px;
+        background: var(--card);
+        box-shadow: 0 8px 28px rgba(25, 53, 60, 0.07);
+      }
+      .credential-preview {
+        display: block;
+        aspect-ratio: 1.35;
+        overflow: hidden;
+        background: #e8eeee;
+      }
+      .credential-preview img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.3s ease; }
+      .credential-preview-pair { display: grid; grid-template-columns: 1.45fr 0.75fr; }
+      .credential-preview-pair img { min-width: 0; }
+      .credential-preview-pair .examiner-photo { border-left: 2px solid #fff; object-position: center; }
+      .credential-preview:hover img { transform: scale(1.025); }
+      .credential-body { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 18px 20px; }
+      .credential-body h3 { margin: 0 0 2px; font-size: 0.98rem; }
+      .credential-body p { margin: 0; color: var(--muted); font-size: 0.78rem; }
+      .credential-link { flex: 0 0 auto; color: var(--pine); font-size: 0.82rem; font-weight: 800; text-decoration: none; }
+      .credential-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+      .section { padding: 82px 0; border-top: 1px solid var(--line); }
+      .section-head { display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 50px; margin-bottom: 38px; }
+      .section-head p:not(.section-kicker) { max-width: 620px; margin: 35px 0 0; color: var(--muted); }
+
+      .experience-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+      .card { min-height: 220px; padding: 28px; border-radius: 12px; background: var(--card); box-shadow: 0 8px 28px rgba(25, 53, 60, 0.06); }
+      .card-number { display: block; margin-bottom: 35px; color: var(--sun); font-family: Georgia, "Times New Roman", serif; font-size: 2.3rem; line-height: 1; }
+      .card h3 { margin-bottom: 10px; font-size: 1.08rem; }
+      .card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+
+      .journey { background: var(--snow); }
+      .journey-grid { display: grid; grid-template-columns: 0.94fr 1.06fr; gap: 55px; }
+      .journey-copy { max-width: 560px; }
+      .journey-copy p { color: var(--muted); }
+      .resort-list { display: grid; gap: 12px; align-content: start; padding-top: 10px; }
+      .resort {
+        display: flex;
+        gap: 17px;
+        align-items: baseline;
+        padding: 14px 0;
+        border-bottom: 1px solid #cbdde5;
+      }
+      .resort span { width: 88px; flex: 0 0 88px; color: var(--pine); font-size: 0.77rem; font-weight: 800; letter-spacing: 0.09em; }
+      .resort p { margin: 0; font-size: 0.96rem; }
+
+      .strengths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+      .strength { padding: 26px 4px 8px; border-top: 2px solid var(--pine); }
+      .strength h3 { margin-bottom: 11px; font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; font-weight: 500; }
+      .strength p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+
+      .gallery-band { overflow: hidden; padding: 72px 0; border-top: 1px solid var(--line); background: #eef6f8; }
+      .gallery-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 27px; }
+      .gallery-head h2 { margin-bottom: 0; }
+      .gallery-head p:not(.section-kicker) { max-width: 440px; margin: 0; color: var(--muted); font-size: 0.91rem; }
+      .gallery-viewport { width: 100%; overflow: hidden; }
+      .gallery-track { display: flex; width: max-content; gap: 13px; padding: 0 13px; animation: gallery-scroll 42s linear infinite; }
+      .gallery-band:hover .gallery-track { animation-play-state: paused; }
+      .gallery-item { width: 174px; height: 178px; flex: 0 0 auto; overflow: hidden; border-radius: 9px; background: #d8e8ee; box-shadow: 0 7px 18px rgba(21, 79, 104, 0.12); }
+      .gallery-item img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease; }
+      .gallery-item:hover img { transform: scale(1.06); }
+      @keyframes gallery-scroll { to { transform: translateX(calc(-50% - 6.5px)); } }
+
+      .growth-grid { display: grid; grid-template-columns: 1fr 0.95fr; gap: 54px; align-items: center; }
+      .growth-copy { padding: 8px 0; }
+      .growth-copy h2 { max-width: 510px; }
+      .growth-copy p { max-width: 570px; color: var(--muted); }
+      .growth-badge {
+        padding: 34px;
+        border-radius: 12px;
+        color: #fff;
+        background: var(--pine);
+      }
+      .growth-badge span { color: #c7e0ea; font-size: 0.77rem; font-weight: 700; letter-spacing: 0.13em; }
+      .growth-badge p { margin: 15px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.52rem; line-height: 1.45; }
+
+      .details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+      .detail { min-height: 126px; padding: 23px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .detail dt { margin-bottom: 8px; color: var(--muted); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.08em; }
+      .detail dd { margin: 0; font-size: 1rem; font-weight: 700; }
+
+      .video-section { padding: 82px 0 0; }
+      .video-intro { max-width: 620px; margin: -3px 0 26px; color: var(--muted); }
+      .video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 340px)); justify-content: center; gap: 22px; }
+      .video-card { overflow: hidden; border-radius: 12px; background: var(--pine-dark); box-shadow: var(--shadow); }
+      .video-card video { display: block; width: 100%; aspect-ratio: 9 / 16; background: #0d3244; object-fit: cover; }
+      .video-card figcaption { padding: 13px 17px 15px; color: #d9edf4; font-size: 0.84rem; }
+      .video-card figcaption span { color: #8fc5d7; font-size: 0.73rem; font-weight: 800; letter-spacing: 0.09em; }
+
+      .contact { padding: 100px 0 90px; }
+      .contact-box { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; padding: 49px; border-radius: 12px; color: #fff; background: var(--pine-dark); }
+      .contact-box .section-kicker { color: #a9d5e5; }
+      .contact-box h2 { margin: 0; }
+      .contact-actions { display: flex; flex-wrap: wrap; gap: 11px; justify-content: flex-end; }
+      .button { display: inline-block; padding: 12px 18px; border: 1px solid #fff; border-radius: 4px; color: #fff; font-size: 0.88rem; font-weight: 700; text-decoration: none; transition: 0.2s ease; }
+      .button:hover { color: var(--pine-dark); background: #fff; }
+      .button.secondary { border-color: #77a9be; color: #e2f0f5; }
+      .button.secondary:hover { color: var(--pine-dark); background: #e2f0f5; }
+
+      footer { padding: 25px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.78rem; }
+      .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+
+      @media (max-width: 760px) {
+        .wrap { width: min(100% - 32px, 620px); }
+        .site-header { padding-top: 19px; }
+        .nav { gap: 14px; }
+        .wordmark { font-size: 0.98rem; }
+        .nav-links { gap: 10px; font-size: 0.72rem; }
+        .hero { min-height: 750px; }
+        .hero-grid { grid-template-columns: 1fr; gap: 25px; padding-top: 104px; }
+        .portrait-placeholder { justify-self: center; width: 230px; margin-top: -7px; }
+        .intro, .section-head, .journey-grid, .growth-grid { grid-template-columns: 1fr; gap: 20px; }
+        .intro { padding-bottom: 58px; }
+        .section { padding: 60px 0; }
+        .section-head { margin-bottom: 28px; }
+        .section-head p:not(.section-kicker) { margin-top: 0; }
+        .stat-grid { grid-template-columns: repeat(2, 1fr); margin-bottom: 58px; }
+        .stat:nth-child(2) { border-right: 0; }
+        .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+        .experience-grid, .strengths, .details, .credential-grid, .video-grid { grid-template-columns: 1fr; }
+        .credentials { padding-bottom: 58px; }
+        .credentials-head { display: block; }
+        .credentials-head p:not(.section-kicker) { margin-top: 15px; }
+        .card { min-height: 0; }
+        .details { border-right: 1px solid var(--line); }
+        .detail { min-height: 0; border-right: 0; }
+        .contact { padding: 70px 0 64px; }
+        .gallery-band { padding: 58px 0; }
+        .gallery-head { display: block; }
+        .gallery-head p:not(.section-kicker) { margin-top: 14px; }
+        .gallery-viewport { overflow-x: auto; scrollbar-width: thin; }
+        .gallery-track { animation: none; }
+        .gallery-item { width: 145px; height: 153px; }
+        .contact-box { grid-template-columns: 1fr; gap: 26px; padding: 31px 25px; }
+        .contact-actions { justify-content: flex-start; }
+        .video-frame { min-height: 300px; }
+        .footer-inner { flex-direction: column; gap: 4px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="wordmark" href="#top">NAOMI SU</a>
+        <nav class="nav-links" aria-label="頁面導覽">
+          <a href="#experience">經驗</a>
+          <a href="#journey">歷程</a>
+          <a href="#contact">聯絡我</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Snowboard &amp; Ski Instructor</p>
+          <h1>蘇映瑋<span class="english-name">Naomi Su</span></h1>
+          <p class="role">雙棲滑雪教練<span>Snowboard &amp; Ski Instructor</span></p>
+          <div class="certificate-row" aria-label="教練證照">
+            <span class="certificate">CSIA LEVEL 1 · SKI</span>
+            <span class="certificate">CASI LEVEL 1 · SNOWBOARD</span>
+          </div>
+        </div>
+        <figure class="portrait-placeholder">
+          <img src="assets/naomi-portrait.jpg" alt="Naomi Su 身穿雪具站在雪場與山景前" />
+          <figcaption class="portrait-label">NAOMI SU · ON SNOW</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <main>
+      <section class="wrap intro" aria-labelledby="intro-title">
+        <div>
+          <p class="section-kicker">ABOUT ME</p>
+          <h2 id="intro-title">讓進步成為每一次雪上的快樂。</h2>
+        </div>
+        <div>
+          <p class="lead">自 2018 年開始滑雪，於 2026 年取得加拿大 CSIA Level 1 雙板與 CASI Level 1 單板證照（日本考照），以安全、清楚的方式，陪伴學員享受每一次進步。</p>
+          <p class="english-summary">CSIA Level 1 Ski and CASI Level 1 Snowboard certified instructor. Safe, clear, and encouraging instruction.</p>
+        </div>
+      </section>
+
+      <section class="wrap stat-grid" aria-label="經驗數據">
+        <div class="stat"><strong>20 hr</strong><span>單板累計授課經驗</span></div>
+        <div class="stat"><strong>25 hr</strong><span>跟課／觀課累計時數</span></div>
+        <div class="stat"><strong>40+ hr</strong><span>自請教練上課時數</span></div>
+        <div class="stat"><strong>2018</strong><span>開始投入滑雪</span></div>
+      </section>
+
+      <section class="wrap credentials" aria-labelledby="credentials-title">
+        <div class="credentials-head">
+          <div>
+            <p class="section-kicker">CERTIFICATIONS</p>
+            <h2 id="credentials-title">加拿大單、雙板教練資格。</h2>
+          </div>
+          <p>CSIA Level 1 雙板與 CASI Level 1 單板證照；可點選查看原始證明檔。</p>
+        </div>
+        <div class="credential-grid">
+          <article class="credential-card">
+            <a class="credential-preview" href="CSIA%20SU%20YING%20WEI%E8%AD%89%E6%9B%B8.pdf" target="_blank" rel="noreferrer" aria-label="開啟 CSIA Level 1 證書 PDF">
+              <img src="assets/csia-level-1-certificate.png" alt="Ying Wei Su 的 CSIA Level 1 證書" loading="lazy" />
+            </a>
+            <div class="credential-body">
+              <div><h3>CSIA Level 1</h3><p>Ski Instructor</p></div>
+              <a class="credential-link" href="CSIA%20SU%20YING%20WEI%E8%AD%89%E6%9B%B8.pdf" target="_blank" rel="noreferrer">查看證書 ↗</a>
+            </div>
+          </article>
+          <article class="credential-card">
+            <a class="credential-preview credential-preview-pair" href="assets/casi-level-1-watermarked.png" target="_blank" rel="noreferrer" aria-label="開啟 CASI Level 1 浮水印證明截圖">
+              <img src="assets/casi-level-1-watermarked.png" alt="Naomi Su 的 CASI Level 1 Snowboard Instructor 浮水印證明截圖" loading="lazy" />
+              <img class="examiner-photo" src="assets/casi-examiner-photo.jpg" alt="Naomi 與 CASI 考官及教練合照" loading="lazy" />
+            </a>
+            <div class="credential-body">
+              <div><h3>CASI Level 1</h3><p>Snowboard Instructor</p></div>
+              <a class="credential-link" href="assets/casi-level-1-watermarked.png" target="_blank" rel="noreferrer">查看證明 ↗</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">TEACHING EXPERIENCE</p>
+              <h2>在實務中累積教學經驗。</h2>
+            </div>
+            <p>2026 年於日本訓練與跟課，持續累積教學實務與教練回饋。</p>
+          </div>
+          <div class="experience-grid">
+            <article class="card">
+              <span class="card-number">20 hr</span>
+              <h3>單板授課經驗</h3>
+              <p>累計 20 小時教學，接觸成人與孩童；重視安全、清楚與循序練習。</p>
+            </article>
+            <article class="card">
+              <span class="card-number">25 hr</span>
+              <h3>跟課與觀課學習</h3>
+              <p>累計 25 小時跟課／觀課，向教練 Johnson Wu 學習課程與學員觀察。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-band" aria-labelledby="gallery-title">
+        <div class="wrap gallery-head">
+          <div>
+            <p class="section-kicker">MOUNTAIN MOMENTS</p>
+            <h2 id="gallery-title">雪上的相遇與成長。</h2>
+          </div>
+          <p>與學生一起練習、探索並享受雪場的每一段時光。</p>
+        </div>
+        <div class="gallery-viewport" aria-label="雪場照片錦集">
+          <div class="gallery-track">
+            <figure class="gallery-item"><img src="assets/gallery/IMG_0053.jpg" alt="雪場教學與互動紀錄" loading="lazy" /></figure>
+            <figure class="gallery-item"><img src="assets/gallery/IMG_9074.jpg" alt="雪場上的學生合影" loading="lazy" /></figure>
+            <figure class="gallery-item"><img src="assets/gallery/IMG_9737.jpg" alt="雪場教學與滑行紀錄" loading="lazy" /></figure>
+            <figure class="gallery-item"><img src="assets/gallery/IMG_9776.jpg" alt="雪場活動紀錄" loading="lazy" /></figure>
+            <figure class="gallery-item"><img src="assets/gallery/IMG_8982.jpg" alt="雪場上的教學互動" loading="lazy" /></figure>
+            <figure class="gallery-item"><img src="assets/gallery/IMG_9106.jpg" alt="雪場滑行紀錄" loading="lazy" /></figure>
+            <figure class="gallery-item" aria-hidden="true"><img src="assets/gallery/IMG_0053.jpg" alt="" loading="lazy" /></figure>
+            <figure class="gallery-item" aria-hidden="true"><img src="assets/gallery/IMG_9074.jpg" alt="" loading="lazy" /></figure>
+            <figure class="gallery-item" aria-hidden="true"><img src="assets/gallery/IMG_9737.jpg" alt="" loading="lazy" /></figure>
+            <figure class="gallery-item" aria-hidden="true"><img src="assets/gallery/IMG_9776.jpg" alt="" loading="lazy" /></figure>
+            <figure class="gallery-item" aria-hidden="true"><img src="assets/gallery/IMG_8982.jpg" alt="" loading="lazy" /></figure>
+            <figure class="gallery-item" aria-hidden="true"><img src="assets/gallery/IMG_9106.jpg" alt="" loading="lazy" /></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section journey" id="journey">
+        <div class="wrap journey-grid">
+          <div class="journey-copy">
+            <p class="section-kicker">ON-SNOW JOURNEY</p>
+            <h2>在各地雪場累積理解。</h2>
+            <p>單板約 80–90 天、雙板約 30 天，累積逾 40 小時教練課；持續在不同雪況中精進技術。</p>
+            <p>曾任直排輪社社長，亦接觸平花、特技直排輪、蛇板與長板，建立板類運動基礎。</p>
+          </div>
+          <div class="resort-list" aria-label="雪場足跡">
+            <div class="resort"><span>JAPAN · NAGANO</span><p>志賀高原、白馬</p></div>
+            <div class="resort"><span>JAPAN · NIIGATA</span><p>越後湯澤</p></div>
+            <div class="resort"><span>JAPAN · YAMAGATA</span><p>藏王</p></div>
+            <div class="resort"><span>JAPAN · KANSAI</span><p>琵琶湖</p></div>
+            <div class="resort"><span>NEW ZEALAND</span><p>南島 Cardrona</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">PROFESSIONAL STRENGTHS</p>
+              <h2>把產品思維帶進教學。</h2>
+            </div>
+            <p>前職為資深數位產品經理，具備跨團隊協作、清楚溝通與以使用者為中心的思考（過去工作經歷可參考 <a href="https://www.cake.me/s--hDrUPk3TBoKc4Pk6DVYlAw--/su-nao" target="_blank" rel="noreferrer">Cake Resume</a>）。</p>
+          </div>
+          <div class="strengths">
+            <article class="strength"><h3>清楚溝通</h3><p>拆解動作與練習目標，讓學員理解下一步。</p></article>
+            <article class="strength"><h3>持續學習</h3><p>吸收回饋，持續更新技術與教學觀察。</p></article>
+            <article class="strength"><h3>跨文化適應</h3><p>TOEIC 905，能英語教學；具日本與紐西蘭雪場經驗，持有國際駕照。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section journey">
+        <div class="wrap growth-grid">
+          <div class="growth-copy">
+            <p class="section-kicker">NEXT RUN</p>
+            <h2>持續探索各種地形。</h2>
+            <p>持續精進平花、公園與多樣地形；以自在、快樂的滑雪經驗陪伴學員進步。</p>
+          </div>
+          <aside class="growth-badge">
+            <span>TEACHING PHILOSOPHY</span>
+            <p>安全地嘗試，清楚地練習，自在地享受滑雪。</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div><p class="section-kicker">AT A GLANCE</p><h2>個人資料</h2></div>
+            <p>可快速閱覽的求職資訊。</p>
+          </div>
+          <dl class="details">
+            <div class="detail"><dt>姓名 / NAME</dt><dd>蘇映瑋 Naomi Su</dd></div>
+            <div class="detail"><dt>出生年月日 / DATE OF BIRTH</dt><dd>1987 / 11 / 29</dd></div>
+            <div class="detail"><dt>單板雪齡 / SNOWBOARD</dt><dd>約 80–90 天</dd></div>
+            <div class="detail"><dt>雙板雪齡 / SKI</dt><dd>約 30 天</dd></div>
+            <div class="detail"><dt>英文能力 / ENGLISH</dt><dd>TOEIC 905</dd></div>
+            <div class="detail"><dt>國際駕照 / IDP</dt><dd>持有</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="wrap video-section" aria-labelledby="video-title">
+        <p class="section-kicker">ON-SNOW VIDEO</p>
+        <h2 id="video-title">滑行作品</h2>
+        <p class="video-intro">兩段實際滑行紀錄（請開聲音）。</p>
+        <div class="video-grid">
+          <figure class="video-card">
+            <video controls preload="metadata" playsinline poster="assets/videos/clip-01-poster.jpg" aria-label="滑行作品影片一">
+              <source src="assets/videos/clip-01.mp4" type="video/mp4" />
+              您的瀏覽器不支援影片播放，請直接開啟 <a href="assets/videos/clip-01.mp4">影片檔案</a>。
+            </video>
+            <figcaption><span>ON-SNOW CLIP 01</span><br />滑行作品紀錄</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video controls preload="metadata" playsinline poster="assets/videos/clip-02-poster.jpg" aria-label="滑行作品影片二">
+              <source src="assets/videos/clip-02.mp4" type="video/mp4" />
+              您的瀏覽器不支援影片播放，請直接開啟 <a href="assets/videos/clip-02.mp4">影片檔案</a>。
+            </video>
+            <figcaption><span>ON-SNOW CLIP 02</span><br />滑行作品紀錄</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="wrap contact-box">
+          <div>
+            <p class="section-kicker">LET'S CONNECT</p>
+            <h2>期待在雪上與你相見。</h2>
+          </div>
+          <div class="contact-actions">
+            <a class="button" href="mailto:schien9211@gmail.com">Email Naomi</a>
+            <a class="button secondary" href="https://www.cake.me/s--hDrUPk3TBoKc4Pk6DVYlAw--/su-nao" target="_blank" rel="noreferrer">Cake Resume ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner"><span>© Naomi Su · Snowboard &amp; Ski Instructor</span><span>Designed for the mountain.</span></div>
+    </footer>
+  </body>
+</html>
